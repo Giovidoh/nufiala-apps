@@ -1,5 +1,6 @@
 {
     "landing": {
+        "header": { "logo": "Nufiala" },
         "hero": {
             "title": "Trouvez le professeur parfait pour votre enfant",
             "description": "Connectez-vous avec des enseignants qualifiés pour des cours particuliers sur mesure."
