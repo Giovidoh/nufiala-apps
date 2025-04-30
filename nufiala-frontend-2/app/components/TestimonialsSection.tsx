@@ -59,11 +59,10 @@ const testimonials: Testimonial[] = [
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
     return (
         <motion.div
+            className="bg-white rounded-xl p-8 shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-xl shadow-lg p-8 mx-auto max-w-3xl"
         >
             {/* Rating */}
             <motion.div
@@ -93,7 +92,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 
             {/* Content */}
             <motion.p
-                className="text-gray-600 mb-6 italic"
+                className="text-[clamp(0.875rem,1.5vw,1rem)] text-gray-600 mb-6 italic"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
@@ -108,17 +107,17 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
             >
-                <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-xl font-bold">
+                <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-[clamp(1.25rem,2vw,1.5rem)] font-bold">
                     {testimonial.name.charAt(0)}
                 </div>
                 <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-gray-900">
+                    <h4 className="text-[clamp(1rem,2vw,1.25rem)] font-semibold text-gray-900">
                         {testimonial.name}
                     </h4>
-                    <div className="text-sm text-gray-500">
+                    <div className="text-[clamp(0.75rem,1.5vw,0.875rem)] text-gray-500">
                         {testimonial.role}
                     </div>
-                    <div className="text-sm text-blue-600 mt-1">
+                    <div className="text-[clamp(0.75rem,1.5vw,0.875rem)] text-blue-600 mt-1">
                         {testimonial.course}
                     </div>
                 </div>
@@ -174,8 +173,11 @@ const TestimonialsSection = () => {
     };
 
     return (
-        <section id="testimonials" className="py-20 bg-gray-50 overflow-hidden">
-            <div className="container mx-auto px-4">
+        <section
+            id="testimonials"
+            className="section bg-gray-50 overflow-hidden"
+        >
+            <div className="section-container">
                 {/* Section Header */}
                 <motion.div
                     className="text-center mb-16"
@@ -183,10 +185,10 @@ const TestimonialsSection = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2 }}
                 >
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold text-gray-900 mb-4">
                         Ce Que Disent Nos Élèves
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-[clamp(1rem,2vw,1.25rem)] text-gray-600 max-w-2xl mx-auto">
                         Découvrez les expériences de nos étudiants et leurs
                         parcours de réussite
                     </p>

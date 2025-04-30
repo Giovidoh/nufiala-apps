@@ -4,6 +4,21 @@
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
+
+    /* Section padding variables */
+    --section-padding-y: 6rem;
+    --section-padding-x: 2rem;
+    --section-padding-y-mobile: 6rem;
+    --section-padding-x-mobile: 2rem;
+
+    /* Header padding variables */
+    --header-padding-y: 1.5rem;
+    --header-padding-y-scrolled: 1rem;
+    --header-padding-x: 2rem;
+    --header-padding-x-mobile: 1rem;
+
+    /* Container max width */
+    --container-max-width: 1280px;
 }
 
 /* Add these styles for global overflow control */
@@ -17,6 +32,38 @@ body {
 /* Optional: Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
+}
+
+/* Section and container utility classes */
+.section {
+    padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.section-container {
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Header utility classes */
+.header {
+    padding: var(--header-padding-y) var(--header-padding-x);
+}
+
+.header-scrolled {
+    padding: var(--header-padding-y-scrolled) var(--header-padding-x);
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: var(--section-padding-y-mobile) var(--section-padding-x-mobile);
+    }
+
+    .header,
+    .header-scrolled {
+        padding: var(--header-padding-y-scrolled) var(--header-padding-x-mobile);
+    }
 }
 
 @theme inline {

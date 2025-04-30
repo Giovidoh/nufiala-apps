@@ -36,7 +36,7 @@ const AnimatedBenefitCard = ({
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="text-xl font-semibold mb-2"
+                className="text-[clamp(1.25rem,2vw,1.5rem)] font-semibold mb-2"
             >
                 {title}
             </motion.h3>
@@ -45,7 +45,7 @@ const AnimatedBenefitCard = ({
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="text-gray-600"
+                className="text-[clamp(0.875rem,1.5vw,1rem)] text-gray-600"
             >
                 {description}
             </motion.p>
@@ -118,12 +118,12 @@ const WhyUsSection = () => {
     ];
 
     return (
-        <section id="why-us" className="py-20 bg-gray-50">
+        <section id="why-us" className="section bg-gray-50">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="container mx-auto px-4"
+                className="section-container"
             >
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -135,7 +135,7 @@ const WhyUsSection = () => {
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-4xl font-bold mb-4"
+                        className="text-[clamp(2rem,4vw,3rem)] font-bold mb-4"
                     >
                         Pourquoi Choisir Nufiala ?
                     </motion.h2>
@@ -143,7 +143,7 @@ const WhyUsSection = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="text-gray-600 max-w-2xl mx-auto"
+                        className="text-[clamp(1rem,2vw,1.25rem)] text-gray-600 max-w-2xl mx-auto"
                     >
                         Découvrez ce qui rend notre plateforme unique et
                         pourquoi des milliers d'étudiants nous font confiance.

@@ -30,7 +30,7 @@ const StepCard = ({
             <div className="flex flex-col items-center">
                 <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white text-xl font-bold z-10"
+                    className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white text-[clamp(1.25rem,2vw,1.5rem)] font-bold z-10"
                 >
                     {number}
                 </motion.div>
@@ -63,8 +63,12 @@ const StepCard = ({
                             {icon}
                         </motion.div>
                         <div>
-                            <h3 className="text-xl font-semibold">{title}</h3>
-                            <p className="text-gray-600">{description}</p>
+                            <h3 className="text-[clamp(1.25rem,2vw,1.5rem)] font-semibold">
+                                {title}
+                            </h3>
+                            <p className="text-[clamp(0.875rem,1.5vw,1rem)] text-gray-600">
+                                {description}
+                            </p>
                         </div>
                     </div>
                     <motion.div
@@ -84,7 +88,7 @@ const StepCard = ({
                                     duration: 0.3,
                                     delay: index * 0.1,
                                 }}
-                                className="flex items-center text-gray-700"
+                                className="flex items-center text-[clamp(0.875rem,1.5vw,1rem)] text-gray-700"
                             >
                                 <motion.svg
                                     whileHover={{ scale: 1.2 }}
@@ -217,7 +221,7 @@ const HowItWorksSection = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-4xl font-bold mb-4"
+                        className="text-[clamp(2rem,4vw,3rem)] font-bold mb-4"
                     >
                         Comment ça marche ?
                     </motion.h2>
@@ -225,7 +229,7 @@ const HowItWorksSection = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="text-gray-600 max-w-2xl mx-auto"
+                        className="text-[clamp(1rem,2vw,1.25rem)] text-gray-600 max-w-2xl mx-auto"
                     >
                         Découvrez en trois étapes simples comment commencer
                         votre parcours d'apprentissage avec Nufiala.

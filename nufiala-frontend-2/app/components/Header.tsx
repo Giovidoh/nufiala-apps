@@ -193,10 +193,12 @@ const Header = () => {
     return (
         <header
             className={`fixed w-full z-50 transition-all duration-300 ${
-                isScrolled ? "bg-white shadow-md py-4" : "bg-transparent py-6"
+                isScrolled
+                    ? "header-scrolled bg-white shadow-md"
+                    : "header bg-transparent"
             }`}
         >
-            <div className="container mx-auto px-4">
+            <div className="section-container">
                 <nav className="flex items-center justify-between">
                     {/* Logo */}
                     <Link
