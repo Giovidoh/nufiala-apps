@@ -16,7 +16,7 @@ interface ButtonProps {
     fullWidth?: boolean;
 }
 
-const Button = ({
+const BaseButton = ({
     children,
     variant = "primary",
     size = "md",
@@ -96,4 +96,4 @@ const Button = ({
     );
 };
 
-export default Button;
+export default BaseButton;

@@ -1,21 +1,15 @@
-import { Header } from '@/components/Header'
-import { HeroSection } from '@/components/sections/hero'
-import { FeaturesSection } from '@/components/sections/features'
-import { HowItWorksSection } from '@/components/sections/how-it-works'
-import { TestimonialsSection } from '@/components/sections/testimonials'
-import { Footer } from '@/components/Footer'
+import Hero from "./components/Hero";
+import WhyUsSection from "./components/WhyUsSection";
+import HowItWorksSection from "./components/HowItWorksSection";
+import TestimonialsSection from "./components/TestimonialsSection";
 
 export default function Home() {
     return (
         <>
-            <Header />
-            <main className="">
-                <HeroSection />
-                <FeaturesSection />
-                <HowItWorksSection />
-                <TestimonialsSection />
-            </main>
-            <Footer />
+            <Hero />
+            <WhyUsSection />
+            <HowItWorksSection />
+            <TestimonialsSection />
         </>
     );
 }

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
-import Button from "./buttons/Button";
+import BaseButton from "./buttons/BaseButton";
 
 // Navigation links table
 const navigationLinks = [
@@ -251,19 +251,23 @@ const Header = () => {
 
                     {/* Auth Buttons */}
                     <div className="hidden lg:flex items-center space-x-4">
-                        <Button
+                        <BaseButton
                             href="/inscription"
                             variant="secondary"
                             size="sm"
                         >
                             Inscription
-                        </Button>
-                        <Button href="/connexion" variant="primary" size="sm">
+                        </BaseButton>
+                        <BaseButton
+                            href="/connexion"
+                            variant="primary"
+                            size="sm"
+                        >
                             Connexion
-                        </Button>
+                        </BaseButton>
                     </div>
 
-                    {/* Mobile Menu Button */}
+                    {/* Mobile Menu BaseButton */}
                     <button
                         onClick={() => setIsMobileMenuOpen(true)}
                         className="p-2 lg:hidden rounded-full hover:bg-gray-100 transition-colors focus:outline-none"
@@ -396,20 +400,20 @@ const Header = () => {
 
                                     {/* Mobile Auth Buttons */}
                                     <div className="mt-6 space-y-3">
-                                        <Button
+                                        <BaseButton
                                             href="/inscription"
                                             variant="secondary"
                                             fullWidth
                                         >
                                             Inscription
-                                        </Button>
-                                        <Button
+                                        </BaseButton>
+                                        <BaseButton
                                             href="/connexion"
                                             variant="primary"
                                             fullWidth
                                         >
                                             Connexion
-                                        </Button>
+                                        </BaseButton>
                                     </div>
                                 </motion.div>
                             </motion.div>
